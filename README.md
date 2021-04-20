@@ -50,7 +50,7 @@ The script requires only one input file: the sequencing reads. Sequencing reads 
 
 # Output
 
-The pipeline will generate an output directory, called `e+d_cutoff`, where the peak files will be stored. Output files have 7 columns: peak rank, sequence rank in within the peak, sequence, read counts, frequency within the pool, distance to the center sequence and status (
+The pipeline will generate an output directory, called `e+d_cutoff`, where the peak files will be stored. Output files have 7 columns: peak rank, sequence rank in within the peak, sequence, read counts, frequency within the pool, distance to the center sequence and status (st = 1 if a sequence is used for the first time, and st = 2 if the sequences has been used previously).
 
 # Reporting bugs
 
