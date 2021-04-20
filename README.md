@@ -46,11 +46,11 @@ Alternatively (although not recommended), ClusterBOSS can be run from a local en
 
 # Input
 
-The script requires one input files: sequencing reads. Sequencing reads are assumed to be 'galaxy-type', that is, to have 3 head lines: number of unique sequences, total number of molecules and an empty line.
+The script requires only one input file: the sequencing reads. Sequencing reads are assumed to have 3 head lines: number of unique sequences, total number of molecules and an empty line. For example, our tool to pre-process sequencing reads [EasyDIVER](https://github.com/celiablanco/EasyDIVER) generates this type of output file. 
 
 # Output
 
-The pipeline will generate an output directory, called `e+d_cutoff`, where the peak files will be stored.
+The pipeline will generate an output directory, called `e+d_cutoff`, where the peak files will be stored. Output files have 7 columns: peak rank, sequence rank in within the peak, sequence, read counts, frequency within the pool, distance to the center sequence and status (
 
 # Reporting bugs
 
