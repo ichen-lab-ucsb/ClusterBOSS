@@ -61,13 +61,13 @@ A mock, test dataset (test_input.fasta) is provided in the test_data folder. To 
 If everything went well, your terminal should look like this:
 
 <p align="center">
-  <img width="400" src="/figures/test_terminal.png">
+  <img width="600" src="/figures/test_terminal.png">
 </p>
 
 and you should have a new folder in your directory:
 
 <p align="center">
-  <img width="1000" src="/figures/output.png">
+  <img width="800" src="/figures/output.png">
 </p>
 
 # Reporting bugs
