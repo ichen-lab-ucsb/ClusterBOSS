@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-This is ClusterBOSS (Cluster Based On Sequence Similarity), a Python tool designed to cluster sequencing data from in vitro selection experiments into families of sequence silimarity.
+This is ClusterBOSS (Cluster Based On Sequence Similarity), a Python tool designed to cluster sequencing data from in vitro selection experiments into families of sequence similarity.
 Input count files are assumed to be 'galaxy-type', that is, to have 3 head lines: number of unique sequences, total number of molecules and an empty line.
 
 Author: Celia Blanco 
@@ -37,7 +37,7 @@ print("""
 
 def main():
 	######################################################
-	############### INPUT AND OUTPUT FILES ###############
+	################### PARAMETERS #######################
 	######################################################
 
 	f_name_in= sys.argv[1]		   	# name of the input file
@@ -70,6 +70,10 @@ def main():
 	if not os.path.exists("e"+str(dist_cutoff)):
 		os.makedirs("e"+str(dist_cutoff))
 
+	######################################################
+	################## CREATE OUTPUT FILES ###############
+	######################################################
+
 	if rec == 'y':
 		rec_num = 2
 		f_name_out= "e"+str(dist_cutoff)+ "/" + f_name_in.split(".")[0] + "_e"+str(dist_cutoff)+"_ms"+str(min_seqs)+"_ma"+str(min_abd) + "_mac"+str(min_abd_center)+ "_rec_peaks.txt"    # name of the output file
@@ -87,7 +91,7 @@ def main():
 			out2=open(f_name_out2, 'w')
 	
 	#######################################################################################################
-	############### READ THE INPUT (COUNTS) FILE AND STORE SEQUENCES & ABUNDANCES IN A LIST ###############
+	################################## READ INPUT (COUNTS) FILE ###########################################
 	#######################################################################################################
 
 	print("Reading input counts file ...")
@@ -113,7 +117,7 @@ def main():
 	sorted_seq=sorted(sequences, reverse=True, key=lambda x: x['abd'])
 
 	################################################
-	############### START CLUSTERING ###############
+	#################### CLUSTER ###################
 	################################################
 
 	print("Clustering sequences ...")
@@ -121,10 +125,10 @@ def main():
 	peak_number = 1     # peak_number will be the number of peaks once the script finishes
 	seq_number=1        # seq_number will be the number of seqs per peak (it will change for every peak and that's why we reset it to 1 when we are done with each cluster)
 
-	out.write(str('peak_rank') + " / " +str('seq_rank') + " / " + str('seq') + " / " +  str('abundance') + " / "  + str('freq') + " / " + str('distance to center') + " / " + str('status') + '\n')      # print the center seq in the file
+	out.write(str('peak_rank') + " / " +str('sequence_rank') + " / " + str('sequence') + " / " +  str('abundance') + " / "  + str('frequency') + " / " + str('distance to center') + " / " + str('status') + '\n')      # print the center seq in the file
 
 	if keep_not_clustered == 'y':
-		out2.write(str('seq') + " / " + str('abundance') + " / " + str('freq') + " / " + str('distance to center') + " / " + str('status') + '\n')      # print the center seq in the file
+		out2.write(str('sequence') + " / " + str('abundance') + " / " + str('frequency') + " / " + str('distance to center') + " / " + str('status') + '\n')      # print the center seq in the file
 
 	for j in range (0,len(sorted_seq)):
 		n_seq = 1
