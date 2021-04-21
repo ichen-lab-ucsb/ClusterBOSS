@@ -70,6 +70,12 @@ and you should have a new folder in your directory:
   <img width="800" src="/figures/output.png">
 </p>
 
+The output file should look like this:
+
+<p align="center">
+  <img width="800" src="/figures/test_output.png">
+</p>
+
 # Reporting bugs
 
 Please report any bugs to Celia Blanco (celiablanco@ucla.edu). 
