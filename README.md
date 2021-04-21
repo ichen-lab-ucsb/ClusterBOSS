@@ -52,6 +52,24 @@ The script requires only one input file: the sequencing reads. Sequencing reads 
 
 The pipeline will generate an output directory, called `e+d_cutoff`, where the peak files will be stored. Output files have 7 columns: peak rank, sequence rank in within the peak, sequence, read counts, frequency within the pool, distance to the center sequence and status (st = 1 if a sequence is used for the first time, and st = 2 if the sequences has been used previously).
 
+# Test dataset
+
+A mock, test dataset (test_input.fasta) is provided in the test_data folder. To run the test dataset, place the data file and the script ClusterBOSS.py in the same folder, and from within that folder type:
+
+`python ClusterBOSS.py test_input.txt 3 1 1 10 n n`
+
+If everything went well, your terminal should look like this:
+
+<p align="center">
+  <img width="400" src="/figures/test_terminal.png">
+</p>
+
+and you should have a new folder in your directory:
+
+<p align="center">
+  <img width="1000" src="/figures/output.png">
+</p>
+
 # Reporting bugs
 
 Please report any bugs to Celia Blanco (celiablanco@ucla.edu). 
