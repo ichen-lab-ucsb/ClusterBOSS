@@ -46,7 +46,7 @@ Alternatively (although not recommended), ClusterBOSS can be run from a local en
 
 # Input
 
-The script requires only one input file: the sequencing reads. Sequencing reads are assumed to have 3 head lines: number of unique sequences, total number of molecules and an empty line. For example, our tool to pre-process sequencing reads [EasyDIVER](https://github.com/celiablanco/EasyDIVER) generates this type of output file. 
+The script requires a sequencing reads file as input. Sequencing reads are assumed to have 3 head lines: number of unique sequences, total number of molecules and an empty line. For example, our tool to pre-process sequencing reads [EasyDIVER](https://github.com/celiablanco/EasyDIVER) generates this type of output file. 
 
 # Output
 
